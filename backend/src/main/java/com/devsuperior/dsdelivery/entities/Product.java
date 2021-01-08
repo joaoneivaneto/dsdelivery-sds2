@@ -6,9 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name= "tb_product")
@@ -29,13 +26,13 @@ public class Product implements Serializable{
 
 }
 
-	public Product(Long id, String name, Double price, String description, String imageUrl) {
+	public Product(Long id, String name, Double price, String description, String imageUri) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.description = description;
-		this.imageUrl = imageUri;
+		this.imageUri = imageUri;
 	}
 
 	public Long getId() {
@@ -70,12 +67,12 @@ public class Product implements Serializable{
 		this.description = description;
 	}
 
-	public String getImageUrl() {
+	public String getImageUri() {
 		return imageUri;
 	}
 
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUri;
+	public void setImageUri(String imageUri) {
+		this.imageUri = imageUri;
 	}
 
 	@Override
